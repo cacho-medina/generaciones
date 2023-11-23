@@ -23,6 +23,7 @@
                 border: 1px solid #fefae0;
                 background-color: transparent;
                 padding: 5px;
+                color: #fff;
                 &::placeholder {
                     font-weight: medium;
                     color: #fff;
@@ -33,6 +34,15 @@
             }
             .info {
                 background-color: #606c38;
+            }
+            .display {
+                border: 2px solid #dda15e;
+            }
+            .justificar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
             }
         </style>
     </head>
@@ -64,6 +74,7 @@
                             name="sexo"
                             class="radio"
                             id="m"
+                            value="M"
                         />Masculino
                     </label>
                     <label for="sexo">
@@ -72,6 +83,7 @@
                             name="sexo"
                             class="radio"
                             id="f"
+                            value="F"
                         />Femenino
                     </label>
                 </div>
@@ -90,10 +102,15 @@
                 <button class="btn btn-outline-light">Ingresar Datos</button>
             </form>
             <div id="informacion" class="d-none">
-                <button class="btn btn-outline-light" onclick="">
+                <button class="btn btn-outline-light" id="mostrar">
                     Mostrar Generacion
                 </button>
-                <button class="btn btn-outline-light" onclick="">Es Mayor?</button>
+                <button class="btn btn-outline-light" id="esMayor">
+                    Es Mayor?
+                </button>
+            </div>
+            <div id="display" class="d-none">
+                <p id="render"></p>
             </div>
         </div>
         <script src="index.js"></script>
